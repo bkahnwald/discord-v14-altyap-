@@ -19,7 +19,7 @@ module.exports = async (client) => {
         client.commands = new Collection();
 
         // Prefix Komutların Bulunması ve Kayıt Ettirilmesi
-        const PrefixCmds = await globPromise(`${process.cwd()}/Commands/*.js`);
+        const PrefixCmds = await globPromise(`${process.cwd()}/PrefixCommands/*.js`);
         PrefixCmds.map((value) => {
             const file = require(value);
             client.commands.set(file.name, file);
