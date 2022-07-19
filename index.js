@@ -21,6 +21,7 @@ fs.readdirSync("./events").forEach(async (file) => {
 
 // Utils
 require("./utils/cmdRegistration")(client);
+client.embed = require("./utils/embedFunction").embed;
 
 // Giriş Yapma
 client.login(config.bot.token).catch((err) => { console.log(err.message) });
