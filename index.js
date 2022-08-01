@@ -1,8 +1,8 @@
 // Tanımlar
-const { Client, GatewayIntentBits, Partials } = require("discord.js");
+const { Client, Partials } = require("discord.js");
 const client = new Client({
     shards: "auto",
-    intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.MessageContent],
+    intents: 3276799,
     partials: [Partials.Channel, Partials.GuildMember, Partials.Message, Partials.Reaction, Partials.GuildScheduledEvent, Partials.ThreadMember, Partials.User],
     allowedMentions: { repliedUser: false, parse: ["everyone","users","roles"] }
 });
