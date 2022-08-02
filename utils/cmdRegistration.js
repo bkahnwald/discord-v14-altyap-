@@ -37,7 +37,7 @@ module.exports = async (client) => {
         client.on("ready", async () => {
             
             // Tek Sunucu İçin
-            const guild = client.guilds.cache.get(config.bot.guildID);
+            const guild = await client.guilds.cache.get(config.bot.guildID);
             await guild.commands.set(ArrayOfSlashCmds).catch(() => {});
             console.log("Komutlar kaydedildi.");
 
