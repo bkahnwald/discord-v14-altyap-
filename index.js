@@ -2,7 +2,7 @@
 const { Client, Partials } = require("discord.js");
 const client = new Client({
     shards: "auto",
-    intents: 3276799,
+    intents: 32767,
     partials: [Partials.Channel, Partials.GuildMember, Partials.Message, Partials.Reaction, Partials.GuildScheduledEvent, Partials.ThreadMember, Partials.User],
     allowedMentions: { repliedUser: false, parse: ["everyone","users","roles"] }
 });
