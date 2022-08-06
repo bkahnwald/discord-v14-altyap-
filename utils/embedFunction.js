@@ -1,8 +1,8 @@
-const { EmbedBuilder } = require("discord.js");
+const { EmbedBuilder } = require("discord.js")
 
-exports.embed = async (description,  color = "#ffffff", title = null) => {
+module.exports = (description, color = "#ffffff", title = null) => {
 
-    // Eğer Renk Belirtilmez Temel Renk Beyaz Baz Alınır
+    // Eğer Renk belirtilmediyse temel renk beyaz atanır.
     
     if (color == "RED") color = "#ff0000"
     else if (color == "YELLOW") color = "#ffff00"
@@ -15,8 +15,7 @@ exports.embed = async (description,  color = "#ffffff", title = null) => {
     const response = new EmbedBuilder()
     .setDescription(description)
     .setColor(color)
-    .setTitle(title)
 
-    return response;
+    return response.data;
 
 }
