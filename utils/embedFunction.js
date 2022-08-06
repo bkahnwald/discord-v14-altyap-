@@ -15,6 +15,7 @@ module.exports = (description, color = "#ffffff", title = null) => {
     const response = new EmbedBuilder()
     .setDescription(description)
     .setColor(color)
+    .setTitle(title)
 
     return response.data;
 
